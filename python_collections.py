@@ -1,4 +1,5 @@
 from collections import defaultdict
+from collections import Counter
 
 # defaultdict allows easily to handle missing keys: when one tries to access a missing key,
 # defaultdict automatically generates a default value for it.
@@ -23,4 +24,5 @@ for name in name_list:
 
 print(name_counter)
 
-  
+
+names = Counter(name_list)
