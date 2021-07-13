@@ -25,4 +25,37 @@ for name in name_list:
 print(name_counter)
 
 
-names = Counter(name_list)
+# Class Counter from collections is a dictionary subclass with special methods to count objects.
+team_1 = ["Joe", "John", "Max", "James", "Peter", "Robert", "John", "John", "James"]
+team_2 = ["Tom", "Alex", "John", "Max", "James", "Thomas", "Peter", "Robert", "John", "Alex"]
+
+dict_team_1 = Counter(team_1)
+dict_team_2 = Counter(team_2)
+
+# accessing number of players with a certain name:
+print(dict_team_1["James"])
+print(dict_team_1["Max"])
+
+# counting total number:
+print(f"{sum(dict_team_1.values())} players in team_1")
+print(f"{sum(dict_team_2.values())} players in team_2")
+
+# combining two teams together:
+dict_team_1.update(team_2)
+
+print(dict_team_1)
+print(f"{sum(dict_team_1.values())} players in updated team_1")
+
+# finding N most common names (which is the largest values in the dict):
+print(dict_team_1.most_common(3))
+print(dict_team_1.most_common())
+
+# subtracting dictionaries:
+dict_team_1.subtract(team_2)
+
+print(f"again {sum(dict_team_1.values())} players in team_1")
+print(dict_team_1.most_common(3))
+print(dict_team_1.most_common())
+
+# finding intersection of two teams:
+print(dict_team_1 & dict_team_2)
