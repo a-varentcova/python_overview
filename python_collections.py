@@ -1,8 +1,14 @@
 from collections import defaultdict
 from collections import Counter
+from collections import OrderedDict
 
-# defaultdict allows easily to handle missing keys: when one tries to access a missing key,
-# defaultdict automatically generates a default value for it.
+# collections module supplies alternatives to built-in list, dict, set and tuple
+# providing additional methods and functionality.
+
+#---------------------------------------
+# defaultdict
+# defaultdict allows easily to handle missing keys:
+# when one tries to access a missing key, defaultdict automatically generates a default value for it.
 
 name_list = ["John", "Max", "James", "Peter", "Robert", "John", "John", "James"]
 
@@ -24,7 +30,8 @@ for name in name_list:
 
 print(name_counter)
 
-
+#---------------------------------------
+# Counter:
 # Class Counter from collections is a dictionary subclass with special methods to count objects.
 team_1 = ["Joe", "John", "Max", "James", "Peter", "Robert", "John", "John", "James"]
 team_2 = ["Tom", "Alex", "John", "Max", "James", "Thomas", "Peter", "Robert", "John", "Alex"]
@@ -59,3 +66,21 @@ print(dict_team_1.most_common())
 
 # finding intersection of two teams:
 print(dict_team_1 & dict_team_2)
+
+#---------------------------------------
+# OrderedDict
+# An instance of the OrderedDict keeps track of the order in which items were inserted.
+# Namely, it remembers the position of the last inserted key. If it overwrites an existing key
+# its position goes to the end.
+
+od_1 = OrderedDict({"a": 1, "b": 2, "c": 3})
+od_2 = OrderedDict({"a": 1, "b": 2, "c": 3})
+od_3 = OrderedDict({"c": 3, "b": 2, "a": 1})
+od_4 = {"c": 3, "b": 2, "a": 1}
+
+# order-sensitive comparison:
+print("od_1 and od_2 are equal:", test_od_1==test_od_2)
+print("od_1 and od_3 are equal:", test_od_1==test_od_3)
+
+# comparison to an ordinary is order-insensitive:
+print("od_1 and od_4 are equal:", test_od_1==test_od_4)
