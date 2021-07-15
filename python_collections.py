@@ -1,11 +1,12 @@
 from collections import defaultdict
 from collections import Counter
 from collections import OrderedDict
+from collections import namedtuple
 
 # collections module supplies alternatives to built-in list, dict, set and tuple
 # providing additional methods and functionality.
 
-#---------------------------------------
+
 # defaultdict
 # defaultdict allows easily to handle missing keys:
 # when one tries to access a missing key, defaultdict automatically generates a default value for it.
@@ -30,8 +31,8 @@ for name in name_list:
 
 print(name_counter)
 
-#---------------------------------------
-# Counter:
+
+# Counter
 # Class Counter from collections is a dictionary subclass with special methods to count objects.
 team_1 = ["Joe", "John", "Max", "James", "Peter", "Robert", "John", "John", "James"]
 team_2 = ["Tom", "Alex", "John", "Max", "James", "Thomas", "Peter", "Robert", "John", "Alex"]
@@ -67,7 +68,7 @@ print(dict_team_1.most_common())
 # finding intersection of two teams:
 print(dict_team_1 & dict_team_2)
 
-#---------------------------------------
+
 # OrderedDict
 # An instance of the OrderedDict keeps track of the order in which items were inserted.
 # Namely, it remembers the position of the last inserted key. If it overwrites an existing key
@@ -84,3 +85,30 @@ print("od_1 and od_3 are equal:", test_od_1==test_od_3)
 
 # comparison to an ordinary is order-insensitive:
 print("od_1 and od_4 are equal:", test_od_1==test_od_4)
+
+
+# namedtuple
+# Tuple subclass: instantiates a tuple-like object which have fields accessible by name
+# and which is indexable and iterable as built-in tuple.
+
+Point = namedtuple('Point', ['x', 'y'])
+Point = namedtuple('Point', 'x y'])
+
+p = Point(x=1, y=2)    # instantiating with keywords arguments
+p = Point(1, 2)        # or instantiating with positional arguments
+
+print(p._fields)       # view the field names
+
+print(p)               # readable __repr__
+
+print(p.x, p.y)        # accessing by name
+print(p[0], p[1])      # accessing by indeces
+
+x, y = p.x, p.y        # unpacking like a regular tuple
+print(x, y)
+
+# _replace method returns a new instance with new provided values:
+p_new = p._replace(y=3)
+print(p)
+print(p_new)
+
