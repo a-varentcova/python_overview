@@ -2,6 +2,7 @@ from collections import defaultdict
 from collections import Counter
 from collections import OrderedDict
 from collections import namedtuple
+from collections import deque
 
 # collections module supplies alternatives to built-in list, dict, set and tuple
 # providing additional methods and functionality.
@@ -112,3 +113,24 @@ p_new = p._replace(y=3)
 print(p)
 print(p_new)
 
+
+# deque
+# List-like container with fast appends and pops on either end. 
+# Memory efficient operations on each end.
+
+d = deque('abcdefghijk')
+
+for element in d:
+    print(element, end=",")
+
+d.pop()             # return and remove the rightmost item
+d.popleft()         # return and remove the leftmost item
+
+d.append(1)         # add a new item to the right
+d.appendleft(2)     # add a new item to the left
+
+# rotate method has default argument n=1, negative numbers will rotate to the left, 
+# positive to the right:
+print(d)
+d.rotate(4)         # right rotation by 4 steps
+print(d)
