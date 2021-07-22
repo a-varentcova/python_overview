@@ -1,21 +1,22 @@
-# Structured python overview with examples
+# Structuring python: overview & examples
 
-
-
-## syllabus:
-
-- ### main data types
-- ### strings and their methods
-- ### main structures and their methods
+### syllabus
+- main data types
+- strings and their methods
+- built-in data structures and their methods
   - lists
   - tuples
   - sets
   - dictionaries
-- ### python comprehensions
-- ### some built-in functions
-- ### python collections
+- python collections
   - defaultdict
   - counter
   - orderedDict
-- ### classes
-- ### logging
+  - namedtuple
+  - deque
+- python comprehensions
+- some built-in functions
+  - any
+  - all
+- classes
+- logging
