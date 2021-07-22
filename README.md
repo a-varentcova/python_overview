@@ -8,6 +8,9 @@
   - tuples
   - sets
   - dictionaries
+- built-in functions
+  - for iterables
+  - for classes
 - python collections
   - defaultdict
   - counter
@@ -15,8 +18,8 @@
   - namedtuple
   - deque
 - python comprehensions
-- some built-in functions
-  - any
-  - all
+- python itertools
+- functions
+- python functools
 - classes
 - logging
