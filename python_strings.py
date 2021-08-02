@@ -36,8 +36,8 @@ def main():
     print(f"{first_name} {last_name} is {age} years old.")    # no need for explicit type conversion
 
     # .format() method (python2):
-    print("{} {} is {} years old".format(first_name, last_name, last_name))
-    print("{1} {0} is {2} years old".format(last_name, first_name, last_name)) 
+    print("{} {} is {} years old".format(first_name, last_name, age))
+    print("{1} {0} is {2} years old".format(last_name, first_name, age)) 
     print("{first_name} is {age} years old".format(first_name="Arni", age=20))
 
 
@@ -46,7 +46,7 @@ def main():
     # Slicing: str[start:stop:step], with default values start=0, stop=len(str), step=1
     # Slicing creates a new string without changing the original.
 
-    test_str_1 = "0123456789"
+    test_str = "0123456789"
  
     print("first item: ", test_str[0])
     print("second item: ", test_str[1])
