@@ -81,11 +81,11 @@ od_3 = OrderedDict({"c": 3, "b": 2, "a": 1})
 od_4 = {"c": 3, "b": 2, "a": 1}
 
 # order-sensitive comparison:
-print("od_1 and od_2 are equal:", test_od_1==test_od_2)
-print("od_1 and od_3 are equal:", test_od_1==test_od_3)
+print("od_1 and od_2 are equal:", od_1==od_2)
+print("od_1 and od_3 are equal:", od_1==od_3)
 
 # comparison to an ordinary is order-insensitive:
-print("od_1 and od_4 are equal:", test_od_1==test_od_4)
+print("od_1 and od_4 are equal:", od_1==od_4)
 
 
 # namedtuple
@@ -93,7 +93,7 @@ print("od_1 and od_4 are equal:", test_od_1==test_od_4)
 # and which is indexable and iterable as built-in tuple.
 
 Point = namedtuple('Point', ['x', 'y'])
-Point = namedtuple('Point', 'x y'])
+Point = namedtuple('Point', 'x y')
 
 p = Point(x=1, y=2)    # instantiating with keywords arguments
 p = Point(1, 2)        # or instantiating with positional arguments
