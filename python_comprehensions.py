@@ -11,7 +11,7 @@ print(list_3)
 print(list_4)
 
 
-# set comprehentions:
+# set comprehensions:
 
 set_1 = {i for i in 'apple'}
 set_2 = {i for i in [1,1,1,2,3,4,5,5,5]}
@@ -20,7 +20,7 @@ print(set_1)
 print(set_2)
 
 
-# dictionary comprehentions:
+# dictionary comprehensions:
 
 dict_0 = {'key1': 1, 'key2': 2, 'key3': 3, 'key4': 4, 'key5': 5}
 
