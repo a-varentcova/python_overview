@@ -57,3 +57,25 @@ print(test_list)
 test_list = ['a', 'b', 'c', 'd', 'e', 'b']
 print(test_list.count('b'))
 print(test_list)
+
+ 
+# list.sort() sorts a list
+# changes list in place
+test_list = ['a', 'b', 'c', 'd', 'e', 'b']
+test_list.sort()
+print(test_list)
+      
+
+# sorted(list) sorts a list,
+# doesn't change the initial list,
+# returns a sorted copy
+test_list = ['a', 'b', 'c', 'd', 'e', 'b']
+print(f"sorted copy: {sorted(test_list)}")
+print(f"original list: {test_list}")
+
+
+# list.reverse() reverses a list without sorting,
+# changes list in place
+test_list = ['a', 'b', 'c', 'd', 'e', 'b']
+print(test_list.reverse())
+print(test_list)
