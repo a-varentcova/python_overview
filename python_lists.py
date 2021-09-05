@@ -79,3 +79,31 @@ print(f"original list: {test_list}")
 test_list = ['a', 'b', 'c', 'd', 'e', 'b']
 print(test_list.reverse())
 print(test_list)
+
+
+# list slicing: creates a new list
+test_list = [0, 1, 2, 3, 4, 5]
+print(f"copy of the list: {test_list[:]}")
+
+
+test_list = [0, 1, 2, 3, 4, 5]
+print(f"reversed: {test_list[::-1]}")
+print(f"original: {test_list}")
+
+
+# string.join(list) creates a new string with items from the given list
+# separated by the string:
+test_list = ['here', 'is', 'a', 'new', 'list']
+print(f"new string: {' '.join(test_list)}")
+print(f"original string: {test_string}")
+
+
+# list unpacking:
+a, b, c = [1, 2, 3]
+print(a, b, c)
+
+a, b, c, *other = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(a, b, c, other)
+
+a, b, c, *other, d = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(a, b, c, other, d)
